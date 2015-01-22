@@ -8,16 +8,31 @@ class HomeController extends Controller {
     $CurrencyValidator = new CurrencyValidator();
     $CoinChecker = new CoinChecker();
     $amount = $_POST['amount'];
+    $json = $_POST['ajax'];
 
     if (!$CurrencyValidator->validate($amount)) {
-      return $this->renderView('index', [
-        'error' => 'Invalid Input. Please Try Again'
-      ]);
+      if (!$json) {
+        return $this->renderView('index', [
+          'error' => 'Invalid Input. Please Try Again'
+        ]);
+      } else {
+        return http_response_code(400);
+      }
     } else {
       $amount = $CurrencyValidator->pence($amount);
-      return $this->renderView('index',  [
-        'coins' => $CoinChecker->minimumCoins($amount)
-      ]);
+      $coins = $CoinChecker->minimumCoins($amount);
+
+      if (!$json) {
+        return $this->renderView('index',  [
+          'coins' => $coins
+        ]);
+      } else {
+        $jsonSafe = [];
+        foreach ($coins as $name => $amount) {
+          $jsonSafe[] = ["coinName" => $name, "amount" => $amount];
+        }
+        echo json_encode($jsonSafe);
+      }
     }
   }
 }

@@ -4,20 +4,24 @@ html,body {
 body {
   font-family: 'Open Sans', Helvetica, sans-serif;
 }
-.mainContainer {
+.main-container {
   margin: 90px auto 0 auto;
 }
-.mainContainer h1 {
+.main-container h1 {
   font-size: 2em;
   margin-bottom: 40px;
   font-weight: normal;
   text-align: center;
 }
-.mainContainer form {
+.main-container form {
   border: 1px solid #ffffff;
   border-radius: 5px;
   padding: 8px;
 }
-.mainContainer form p {
+.main-container form p {
   font-size: 0.8em;
+}
+.modal-body img {
+  display: block;
+  margin: 0 auto;
 }
