@@ -2,6 +2,8 @@
 
 Simple PHP webapp to find the smallest amount of British coins (only 1p,2p,20p,50p,£1,£2) required to make up an amount.
 
+You can see a live version at http://inflw.co/change
+
 ## Installation
 
 You will need:
