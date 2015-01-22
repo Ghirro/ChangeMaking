@@ -1,0 +1,23 @@
+html,body {
+  min-height: 100%;
+}
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+.mainContainer {
+  margin: 90px auto 0 auto;
+}
+.mainContainer h1 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-weight: normal;
+  text-align: center;
+}
+.mainContainer form {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 8px;
+}
+.mainContainer form p {
+  font-size: 0.8em;
+}
