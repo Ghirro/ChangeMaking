@@ -1,0 +1,22 @@
+{
+  "name": "CoinChecker",
+  "version": "0.0.0",
+  "authors": [
+    "Ben Stephenson"
+  ],
+  "description": "PHP WebApp to check the required minimum coinage to make a currency",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.3"
+  }
+}
